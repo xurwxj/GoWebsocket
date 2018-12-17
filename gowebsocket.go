@@ -75,7 +75,7 @@ func (socket *Socket) Connect() error {
 		return err
 	}
 
-	logger.Info.Println("Connected to server")
+	// logger.Info.Println("Connected to server")
 
 	if socket.OnConnected != nil {
 		socket.IsConnected = true
@@ -84,7 +84,7 @@ func (socket *Socket) Connect() error {
 
 	defaultPingHandler := socket.Conn.PingHandler()
 	socket.Conn.SetPingHandler(func(appData string) error {
-		logger.Trace.Println("Received PING from server")
+		// logger.Trace.Println("Received PING from server")
 		if socket.OnPingReceived != nil {
 			socket.OnPingReceived(appData, *socket)
 		}
@@ -118,7 +118,7 @@ func (socket *Socket) Connect() error {
 			socket.receiveMu.Unlock()
 			if err != nil {
 				// logger.Error.Println("read:", err)
-				return err
+				return
 			}
 			// logger.Info.Println("recv: %s", message)
 
