@@ -11,11 +11,12 @@ This client provides following easy to implement functionality
 - Setting request headers
 - Subprotocols support
 - SSL verification enable/disable
+- add error return for func
 
 To install use
 
 ```markdown
-    go get github.com/sacOO7/gowebsocket
+    go get github.com/xurwxj/gowebsocket
 ```
 
 Description

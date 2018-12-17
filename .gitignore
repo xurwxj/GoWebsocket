@@ -19,3 +19,5 @@ bin/
 
 #ignore any IDE based files
 .idea/**
+glide.lock
+vendor/

@@ -3,13 +3,13 @@ package gowebsocket
 import (
 	"net/http"
 	"net/url"
-	"log"
 )
 
 func BuildProxy(Url string) func(*http.Request) (*url.URL, error) {
-	uProxy, err := url.Parse(Url)
-	if err != nil {
-		log.Fatal("Error while parsing url ", err)
+	if uProxy, err := url.Parse(Url); err != nil {
+		// log.Fatal("Error while parsing url ", err)
+		return nil, err
+	} else {
+		return http.ProxyURL(uProxy), nil
 	}
-	return http.ProxyURL(uProxy)
 }
