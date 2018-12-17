@@ -46,7 +46,7 @@ Create instance of `Websocket` by passing url of websocket-server end-point
     
     import (
     	"log"
-    	"github.com/sacOO7/gowebsocket"
+    	"github.com/xurwxj/gowebsocket"
         "os"
         "os/signal"
     )
@@ -150,7 +150,7 @@ Create instance of `Websocket` by passing url of websocket-server end-point
 ```
 
 - ConnectionOptions needs to be applied before connecting to server
-- Please checkout [**examples/gowebsocket**](!https://github.com/sacOO7/GoWebsocket/tree/master/examples/gowebsocket) directory for detailed code..
+- Please checkout [**examples/gowebsocket**](!https://github.com/xurwxj/GoWebsocket/tree/master/examples/gowebsocket) directory for detailed code..
 
 License
 -------
