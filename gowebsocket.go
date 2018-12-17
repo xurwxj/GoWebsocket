@@ -161,7 +161,8 @@ func (socket *Socket) send(messageType int, data []byte) error {
 }
 
 func (socket *Socket) Close() error {
-	if err := socket.send(websocket.CloseMessage, websocket.FormatCloseMessage(websocket.CloseNormalClosure, "")); err != nil {
+	err := socket.send(websocket.CloseMessage, websocket.FormatCloseMessage(websocket.CloseNormalClosure, ""))
+	if err != nil {
 		return err
 	}
 	socket.Conn.Close()
